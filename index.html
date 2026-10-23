@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow"><!-- versi pratinjau -->
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="RekaInsta membantu usaha membereskan masalah inti operasionalnya, dari ide sampai prototipe yang bisa dicoba, dengan cepat.">
+  <title>RekaInsta — Melangkah lebih cepat</title>
+  <meta property="og:title" content="RekaInsta — Melangkah lebih cepat">
+  <meta property="og:description" content="Masalah inti bisnis Anda jadi solusi yang jelas dan prototipe interaktif yang bisa dicoba tim.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/rekainsta-mark.svg">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; background: #f8f9fc; }
+    h1,h2,h3,.brand { font-family: 'Manrope', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body::before { content: ''; position: fixed; inset: 0 0 auto; height: 760px; z-index: -1; pointer-events: none; background: radial-gradient(ellipse 58% 62% at 50% 0%, rgba(71,123,255,.14), transparent 72%), radial-gradient(ellipse 30% 45% at 86% 12%, rgba(255,167,122,.12), transparent 76%); }
+    header { position: sticky; top: 0; z-index: 30; background: rgba(248,249,252,.8); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(31,41,55,.06); }
+    header { height: 82px; justify-content: center; }
+    header > a:first-child { position: absolute; left: 50%; transform: translateX(-50%); top: 14px; display: flex; flex-direction: column; align-items: center; line-height: 1; }
+    .lockup-row { display: flex; align-items: center; gap: 10px; }
+    .lockup-word { font: 700 19px/1 'Manrope', sans-serif; letter-spacing: .16em; margin-right: -.16em; color: #17233D; }
+    .lockup-tag { display: block; width: max-content; margin-top: 9px; padding: 0 22px 8px; border-bottom: 1px solid #cbd3e1; color: #738098; font: 600 8px/1 'DM Sans', sans-serif; letter-spacing: .17em; }
+    .mk-base { fill: #17233D; }
+    .mk-light .mk-base { fill: #fff; }
+    .mk-mono .mk-base, .mk-mono path { fill: currentColor; }
+    @media (max-width: 640px) { .lockup-word { font-size: 16px; } .lockup-row { gap: 8px; } }
+    header nav { margin-right: auto; }
+    header > div:last-child { margin-left: auto; }
+    .hero-section { display: flex !important; flex-direction: column; align-items: center; gap: 48px !important; padding-top: 92px !important; padding-bottom: 56px !important; text-align: center; }
+    .hero-copy { display: flex; flex-direction: column; align-items: center; }
+    .hero-copy h1 { max-width: 900px; font-size: clamp(3.4rem,8vw,6.8rem) !important; line-height: .99 !important; letter-spacing: -.085em !important; }
+    .hero-copy > p:nth-of-type(2) { max-width: 650px; }
+    .hero-copy > div { justify-content: center; }
+    .hero-art { width: min(100%, 1040px) !important; max-width: 1040px !important; }
+    .hero-art::before { content: ''; position: absolute; inset: 8% 8% -5%; border-radius: 40px; background: linear-gradient(135deg,rgba(44,105,255,.24),rgba(100,183,255,.12) 55%,rgba(255,192,146,.2)); filter: blur(48px); }
+    .hero-window { position: relative; overflow: hidden; border: 1px solid rgba(25,39,72,.12); border-radius: 22px !important; background: #fff !important; padding: 0 !important; color: #202a3a !important; box-shadow: 0 36px 90px -40px rgba(36,67,129,.35),0 12px 32px -18px rgba(25,39,72,.22) !important; text-align: left; }
+    .hero-window .grain { background-image: none; }
+    .hero-window > div:first-child { height: 48px; padding: 0 18px 0 78px !important; position: relative; background: #fbfcfe; border-bottom: 1px solid #e8ebf1; color: #737b8c !important; }
+    .hero-window > div:first-child::before { content: '●  ●  ●'; position: absolute; left: 18px; top: 16px; color: #c9ced9; font-size: 10px; letter-spacing: 3px; }
+    .hero-window > p { max-width: none !important; margin: 0 !important; padding: 22px 26px 16px; color: #273247; font-size: 15px !important; font-weight: 700 !important; }
+    .hero-window > div:nth-of-type(2) { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px !important; margin: 0 !important; padding: 0 26px 26px; }
+    .hero-window > div:nth-of-type(2) > div { min-height: 190px; align-items: flex-start; flex-direction: column; justify-content: space-between; gap: 18px !important; border: 1px solid #e5e9f0 !important; border-radius: 16px !important; background: linear-gradient(150deg,#fff,#f8faff) !important; padding: 17px !important; box-shadow: 0 5px 16px rgba(41,59,93,.04); }
+    .hero-window > div:nth-of-type(2) > div:nth-child(2) { background: linear-gradient(150deg,#f1f5ff,#fff) !important; border-color: #dbe5ff !important; }
+    .hero-window > div:nth-of-type(2) > div:nth-child(3) { background: linear-gradient(150deg,#f8fff3,#fff) !important; }
+    .hero-window > div:nth-of-type(2) > div span:first-child { width: 38px; height: 38px; }
+    .hero-window > div:nth-of-type(2) > div span:nth-child(2) { font-size: 14px !important; color: #263349; }
+    .hero-window > div:nth-of-type(2) > div span:last-child { display: none; }
+    .hero-window > div:last-child { margin: 0 !important; padding: 0 26px 20px; align-items: center !important; border-top: 1px solid #edf0f5; padding-top: 15px; }
+    .hero-window > div:last-child span:first-child { max-width: none !important; color: #798194 !important; }
+    .hero-window > div:last-child span:last-child { color: #d9deea !important; }
+    @media(max-width:640px) {
+      .hero-section { gap: 36px !important; padding-top: 60px !important; padding-bottom: 42px !important; }
+      .hero-copy h1 { font-size: clamp(3.1rem,15vw,4.8rem) !important; }
+      .hero-art::before { inset: 8% 4% -4%; filter: blur(28px); }
+      .hero-window { border-radius: 17px !important; }
+      .hero-window > div:first-child { height: 42px; }
+      .hero-window > p { padding: 18px 16px 12px; }
+      .hero-window > div:nth-of-type(2) { gap: 8px !important; padding: 0 12px 16px; }
+      .hero-window > div:nth-of-type(2) > div { min-height: 142px; gap: 12px !important; padding: 11px !important; border-radius: 12px !important; }
+      .hero-window > div:nth-of-type(2) > div span:first-child { width: 32px; height: 32px; }
+      .hero-window > div:nth-of-type(2) > div span:nth-child(2) { font-size: 12px !important; }
+      .hero-window > div:last-child { padding: 12px 14px 16px; }
+    }
+    /* --- hero step illustrations --- */
+    .hero-window > div:nth-of-type(2) > div { margin-top: 0 !important; }
+    .hero-window > div:nth-of-type(2) > div span:nth-child(2) { order: 2; }
+    .step-art { order: 1; width: 100%; }
+    .step-art svg { display: block; width: 100%; height: auto; overflow: visible; }
+    @media (prefers-reduced-motion: no-preference) {
+      .art-sway { animation: art-sway 4.5s ease-in-out infinite; }
+      .art-pulse { transform-box: fill-box; transform-origin: center; animation: art-pulse 2.2s ease-out infinite; }
+      .art-nudge { animation: art-nudge 2.6s ease-in-out infinite; }
+    }
+    @keyframes art-sway { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-5px, 3px); } }
+    @keyframes art-pulse { 0% { transform: scale(.7); opacity: .9; } 100% { transform: scale(1.9); opacity: 0; } }
+    @keyframes art-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+    /* --- added: view switch, filter chips, form fields --- */
+    .seg button[aria-pressed="true"], .chip[aria-pressed="true"] { background: #20231f; color: #fff; border-color: #20231f; }
+    .field { display: block; width: 100%; margin-top: .5rem; border: 1px solid #dedfd7; border-radius: 14px; background: #fbfbf8; padding: .85rem 1rem; font-size: 15px; line-height: 1.4; color: #20231f; transition: border-color .2s, box-shadow .2s, background .2s; }
+    .field::placeholder { color: #a3a69d; }
+    .field:focus { outline: none; border-color: #20231f; background: #fff; box-shadow: 0 0 0 3px rgba(250,91,53,.18); }
+    .field:user-invalid { border-color: #dd4828; }
+    select.field { appearance: none; padding-right: 2.75rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%2320231f' stroke-width='1.6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1.1rem center; }
+    .case-body { transition: opacity .25s; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .case-card, .case-card img { transition: none !important; } }
+  </style>
+</head>
+<body class="bg-[#f7f7f2] text-[#20231f] antialiased">
+  <header class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
+    <a href="#top" aria-label="RekaInsta, ke awal halaman"><span class="lockup-row"><svg class="h-7 w-7 shrink-0" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect x="8" y="8" width="38" height="38" rx="4" class="mk-base"/><path d="M54 8 H73 A19 19 0 0 1 73 46 H54 Z" fill="#FA5B35"/><rect x="8" y="54" width="38" height="38" rx="4" class="mk-base"/><path d="M54 54 L92 92 H58 A4 4 0 0 1 54 88 Z" class="mk-base"/></svg><span class="lockup-word">REKAINSTA</span></span><span class="lockup-tag" data-i18n="logoTag">PRODUK · SISTEM · AI</span></a>
+    <nav class="hidden items-center gap-8 text-sm font-medium text-[#62665e] xl:flex">
+      <a href="#approach" data-i18n="navApproach" class="transition hover:text-[#20231f]">Cara kerja</a>
+      <a href="#work" data-i18n="navWork" class="transition hover:text-[#20231f]">Karya pilihan</a>
+      <a href="#try" data-i18n="navTry" class="transition hover:text-[#20231f]">Coba prototipe</a>
+      <a href="#team" data-i18n="navTeam" class="transition hover:text-[#20231f]">Tim kami</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button id="language" class="rounded-full border border-[#dedfd7] px-3 py-2 text-xs font-bold tracking-wide hover:bg-white" aria-label="Switch language">EN <span class="text-[#aaa99f]">/</span> ID</button>
+      <a href="#contact" data-i18n="navCta" class="hidden rounded-full bg-[#20231f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#fa5b35] sm:inline-flex">Mari bicara</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-section mx-auto grid max-w-7xl gap-12 px-5 pb-20 pt-12 sm:px-8 sm:pb-28 sm:pt-20 lg:grid-cols-[1.08fr_.92fr] lg:items-center lg:px-12 lg:pb-32 lg:pt-24">
+      <div class="hero-copy relative z-10">
+        <p class="mb-7 flex items-center gap-2 text-xs font-bold uppercase tracking-[.18em] text-[#71756d]"><span class="h-2 w-2 rounded-full bg-[#fa5b35]"></span><span data-i18n="eyebrow">PRODUK · SISTEM · AI</span></p>
+        <h1 data-i18n="heroTitle" class="max-w-3xl text-[clamp(3.2rem,8vw,6.8rem)] font-semibold leading-[.98] tracking-[-.075em]">Melangkah <span class="text-[#fa5b35]">lebih cepat.</span></h1>
+        <p data-i18n="heroBody" class="mt-7 max-w-xl text-lg leading-8 text-[#62665e] sm:text-xl">Kami mengubah masalah inti bisnis Anda menjadi solusi yang jelas—dan prototipe interaktif yang bisa dicoba tim, dengan cepat.</p>
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#approach" data-i18n="heroCta" class="inline-flex items-center rounded-full bg-[#fa5b35] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#dd4828]">Lihat cara kerja kami</a>
+          <span data-i18n="heroNote" class="text-sm text-[#777a72]">Dari masalah inti menuju go-to-market.</span>
+        </div>
+      </div>
+      <div class="hero-art relative mx-auto w-full max-w-xl lg:ml-auto">
+        <div class="absolute -right-3 -top-4 h-28 w-28 rounded-full bg-[#f5c84c] sm:-right-7 sm:-top-7 sm:h-36 sm:w-36"></div>
+        <div class="hero-window grain relative overflow-hidden rounded-[2rem] bg-[#22251f] p-6 text-white shadow-2xl shadow-[#20231f]/10 sm:rounded-[2.5rem] sm:p-9">
+          <div class="relative z-10 flex items-center justify-between border-b border-white/15 pb-5 text-xs text-white/60"><span data-i18n="demoLabel">LANGKAH PERTAMA</span><span>RI / 01</span></div>
+          <p data-i18n="demoQuestion" class="relative z-10 mt-8 max-w-sm text-2xl font-medium leading-snug tracking-tight sm:text-3xl">Apa satu hal yang paling menghambat bisnis Anda?</p>
+          <div class="relative z-10 mt-8">
+            <div class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[.07] p-4"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#fa5b35] text-sm font-bold">01</span><span data-i18n="demoStep1" class="text-sm">Temukan masalah intinya</span><div class="step-art"><svg viewBox="0 0 240 140" aria-hidden="true" focusable="false"><g transform="rotate(-8 62 53)"><rect x="24" y="28" width="76" height="50" rx="8" fill="#eef1f6"/><rect x="34" y="40" width="44" height="5" rx="2.5" fill="#d5dbe6"/><rect x="34" y="51" width="56" height="5" rx="2.5" fill="#d5dbe6"/><rect x="34" y="62" width="32" height="5" rx="2.5" fill="#d5dbe6"/></g><g transform="rotate(7 178 47)"><rect x="140" y="22" width="76" height="50" rx="8" fill="#eef1f6"/><rect x="150" y="34" width="50" height="5" rx="2.5" fill="#d5dbe6"/><rect x="150" y="45" width="36" height="5" rx="2.5" fill="#d5dbe6"/><rect x="150" y="56" width="44" height="5" rx="2.5" fill="#d5dbe6"/></g><rect x="80" y="62" width="84" height="56" rx="9" fill="#fff" stroke="#fa5b35" stroke-width="2.5"/><rect x="92" y="76" width="36" height="5" rx="2.5" fill="#d5dbe6"/><rect x="92" y="88" width="26" height="5" rx="2.5" fill="#d5dbe6"/><rect x="92" y="100" width="30" height="5" rx="2.5" fill="#d5dbe6"/><circle cx="146" cy="82" r="10" fill="#fa5b35"/><rect x="144.5" y="75" width="3" height="9" rx="1.5" fill="#fff"/><circle cx="146" cy="88" r="1.8" fill="#fff"/><g class="art-sway"><circle cx="146" cy="82" r="24" fill="#fff" fill-opacity=".08" stroke="#17233D" stroke-width="6"/><path d="M163 99 L184 120" stroke="#17233D" stroke-width="9" stroke-linecap="round"/></g></svg></div></div>
+            <div class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[.07] p-4"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#d4ed8b] text-sm font-bold text-[#20231f]">02</span><span data-i18n="demoStep2" class="text-sm">Buat prototipe solusi</span><div class="step-art"><svg viewBox="0 0 240 140" aria-hidden="true" focusable="false"><rect x="22" y="34" width="56" height="44" rx="8" fill="#fff" stroke="#dbe3f2" stroke-width="1.5"/><rect x="32" y="60" width="8" height="10" rx="2" fill="#cfd9ee"/><rect x="45" y="52" width="8" height="18" rx="2" fill="#9fb4dc"/><rect x="58" y="44" width="8" height="26" rx="2" fill="#17233D"/><rect x="90" y="8" width="66" height="124" rx="13" fill="#fff" stroke="#17233D" stroke-width="5"/><rect x="113" y="14" width="20" height="4" rx="2" fill="#17233D"/><rect x="100" y="26" width="46" height="10" rx="4" fill="#d4ed8b"/><circle cx="105" cy="48" r="4.5" fill="#8fb339"/><rect x="114" y="45" width="30" height="6" rx="3" fill="#e3e7ef"/><circle cx="105" cy="64" r="4.5" fill="#8fb339"/><rect x="114" y="61" width="24" height="6" rx="3" fill="#e3e7ef"/><circle cx="105" cy="80" r="4.5" fill="#8fb339"/><rect x="114" y="77" width="28" height="6" rx="3" fill="#e3e7ef"/><rect x="100" y="100" width="46" height="16" rx="8" fill="#17233D"/><circle class="art-pulse" cx="134" cy="108" r="9" fill="none" stroke="#fa5b35" stroke-width="2.5"/><circle cx="134" cy="108" r="5" fill="#fa5b35"/><rect x="170" y="70" width="48" height="34" rx="8" fill="#fff" stroke="#dbe3f2" stroke-width="1.5"/><circle cx="184" cy="87" r="7" fill="#d4ed8b"/><path d="M180.5 87 l2.6 2.6 l4.6 -5" stroke="#17233D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="195" y="84" width="16" height="6" rx="3" fill="#e3e7ef"/></svg></div></div>
+            <div class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[.07] p-4"><span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#f5c84c] text-sm font-bold text-[#20231f]">03</span><span data-i18n="demoStep3" class="text-sm">Tentukan langkah berikutnya</span><div class="step-art"><svg viewBox="0 0 240 140" aria-hidden="true" focusable="false"><path d="M14 128 H226" stroke="#e3e7ef" stroke-width="3" stroke-linecap="round"/><rect x="116" y="28" width="8" height="100" rx="3" fill="#17233D"/><g class="art-nudge"><path d="M124 34 H182 L196 46 L182 58 H124 Z" fill="#17233D"/><path d="M146 46 H170 M163 40 L170 46 L163 52" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g><path d="M116 66 H60 L46 78 L60 90 H116 Z" fill="#f5c84c"/><path d="M94 78 H70 M77 72 L70 78 L77 84" stroke="#17233D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="190" y="93" width="15" height="15" rx="2.5" fill="#17233D"/><path d="M208 93 H214 A7.5 7.5 0 0 1 214 108 H208 Z" fill="#fa5b35"/><rect x="190" y="111" width="15" height="15" rx="2.5" fill="#17233D"/><path d="M208 111 L223 126 H210 A2 2 0 0 1 208 124 Z" fill="#17233D"/><rect x="14" y="94" width="28" height="34" rx="4" fill="#fff" stroke="#17233D" stroke-width="2.5"/><path d="M21 104 H35 M21 111 H31" stroke="#cfd6e3" stroke-width="2.5" stroke-linecap="round"/><circle cx="39" cy="123" r="8" fill="#f5c84c"/><path d="M35.2 123 l2.6 2.6 l4.4 -4.8" stroke="#17233D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          </div>
+          <div class="relative z-10 mt-8 flex items-end justify-between"><span data-i18n="demoFoot" class="max-w-[210px] text-xs leading-5 text-white/50">Demo front-end yang bisa dicoba. Percakapan nyata. Tanpa kewajiban untuk lanjut.</span><span class="text-white/20"><svg class="mk-mono h-8 w-8" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect x="8" y="8" width="38" height="38" rx="4" class="mk-base"/><path d="M54 8 H73 A19 19 0 0 1 73 46 H54 Z" fill="#FA5B35"/><rect x="8" y="54" width="38" height="38" rx="4" class="mk-base"/><path d="M54 54 L92 92 H58 A4 4 0 0 1 54 88 Z" class="mk-base"/></svg></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-[#e3e3dc] bg-white/55">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-9 sm:grid-cols-3 sm:px-8 lg:px-12">
+        <div class="flex items-start gap-4"><span class="brand text-3xl font-semibold tracking-[-.06em] text-[#fa5b35]">01</span><div><h2 data-i18n="value1Title" class="font-bold">Tambah revenue</h2><p data-i18n="value1Body" class="mt-1 text-sm leading-6 text-[#777a72]">Bangun solusi untuk peluang yang layak dikejar.</p></div></div>
+        <div class="flex items-start gap-4"><span class="brand text-3xl font-semibold tracking-[-.06em] text-[#fa5b35]">02</span><div><h2 data-i18n="value2Title" class="font-bold">Operasional lebih efisien</h2><p data-i18n="value2Body" class="mt-1 text-sm leading-6 text-[#777a72]">Kurangi hambatan dalam pekerjaan sehari-hari.</p></div></div>
+        <div class="flex items-start gap-4"><span class="brand text-3xl font-semibold tracking-[-.06em] text-[#fa5b35]">03</span><div><h2 data-i18n="value3Title" class="font-bold">Bergerak lebih cepat</h2><p data-i18n="value3Body" class="mt-1 text-sm leading-6 text-[#777a72]">Ubah ide menjadi solusi yang bisa diuji tim.</p></div></div>
+      </div>
+    </section>
+
+    <section id="approach" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
+      <div class="grid gap-10 lg:grid-cols-[.78fr_1.22fr]">
+        <div><p data-i18n="approachLabel" class="text-xs font-bold uppercase tracking-[.18em] text-[#fa5b35]">CARA MEMULAI YANG LEBIH BAIK</p><h2 data-i18n="approachTitle" class="mt-5 max-w-md text-4xl font-semibold leading-tight tracking-[-.06em] sm:text-5xl">Lihat solusinya sebelum berkomitmen membangunnya.</h2></div>
+        <div>
+          <p data-i18n="approachBody" class="max-w-2xl text-lg leading-8 text-[#62665e]">Proyek perangkat lunak besar tak seharusnya dimulai dengan tebak-tebakan. Kami memahami masalah bisnisnya, lalu merumuskannya dengan cepat menjadi prototipe front-end interaktif. Pengambil keputusan bisa mencoba alurnya, menguji idenya, lalu memutuskan apakah solusi itu layak dibangun penuh.</p>
+          <div class="mt-8 grid gap-3 sm:grid-cols-3">
+            <article class="rounded-2xl border border-[#e3e3dc] bg-white p-5"><span class="text-xs font-bold text-[#fa5b35]">01 / DISCOVER</span><h3 data-i18n="step1Title" class="mt-5 font-bold">Temukan masalah sebenarnya</h3><p data-i18n="step1Body" class="mt-2 text-sm leading-6 text-[#777a72]">Percakapan awal untuk memahami letak hambatan—dan peluang—bisnis Anda.</p></article>
+            <article class="rounded-2xl border border-[#e3e3dc] bg-white p-5"><span class="text-xs font-bold text-[#fa5b35]">02 / EXPLORE</span><h3 data-i18n="step2Title" class="mt-5 font-bold">Wujudkan solusinya</h3><p data-i18n="step2Body" class="mt-2 text-sm leading-6 text-[#777a72]">Eksplorasi solusi berbayar menghasilkan demo interaktif front-end untuk alur masalah inti.</p></article>
+            <article class="rounded-2xl border border-[#e3e3dc] bg-white p-5"><span class="text-xs font-bold text-[#fa5b35]">03 / DECIDE</span><h3 data-i18n="step3Title" class="mt-5 font-bold">Pilih langkah berikutnya</h3><p data-i18n="step3Body" class="mt-2 text-sm leading-6 text-[#777a72]">Lanjut ke pengembangan production—atau berhenti dengan demo dan ringkasan solusi.</p></article>
+          </div>
+          <p data-i18n="processNote" class="mt-5 text-xs leading-5 text-[#777a72]">Prototipe cepat bukan jalan pintas untuk rekayasa production. Pengembangan penuh mengikuti praktik standar pengembangan perangkat lunak.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#22251f] text-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:px-12">
+        <div><p data-i18n="proofLabel" class="text-xs font-bold uppercase tracking-[.18em] text-[#d4ed8b]">DIBUAT UNTUK KERUMITAN DUNIA NYATA</p><h2 data-i18n="proofTitle" class="mt-5 max-w-lg text-4xl font-semibold leading-tight tracking-[-.06em] sm:text-5xl">Bukan sekadar ide. Sistem yang diandalkan.</h2><p data-i18n="proofBody" class="mt-5 max-w-md leading-7 text-white/60">Tim kami mengerjakan produk dan sistem di bidang keuangan, perdagangan, layanan publik, dan AI. Hasil pilihan di bawah mencakup pekerjaan bersama perusahaan mitra.</p></div>
+        <div class="grid grid-cols-2 gap-3 sm:gap-4">
+          <div class="rounded-2xl border border-white/10 bg-white/[.05] p-5 sm:p-7"><strong data-i18n="statV1" class="brand text-3xl tracking-[-.06em] sm:text-4xl">Rp 230 miliar</strong><p data-i18n="stat1" class="mt-2 text-sm leading-6 text-white/60">pembiayaan tersalur ke usaha kecil</p><span data-i18n="statS1" class="mt-4 block text-[10px] text-white/35">eFishery Kabayan · bersama mitra pendanaan</span></div>
+          <div class="rounded-2xl border border-white/10 bg-white/[.05] p-5 sm:p-7"><strong data-i18n="statV2" class="brand text-3xl tracking-[-.06em] sm:text-4xl">10.000+</strong><p data-i18n="stat2" class="mt-2 text-sm leading-6 text-white/60">pelaku usaha kecil menjadi pelanggan</p><span data-i18n="statS2" class="mt-4 block text-[10px] text-white/35">eFishery Kabayan</span></div>
+          <div class="rounded-2xl border border-white/10 bg-white/[.05] p-5 sm:p-7"><strong data-i18n="statV3" class="brand text-3xl tracking-[-.06em] sm:text-4xl">900.000+</strong><p data-i18n="stat3" class="mt-2 text-sm leading-6 text-white/60">pendaftar dalam satu musim penerimaan</p><span data-i18n="statS3" class="mt-4 block text-[10px] text-white/35">SPMB Jawa Barat 2026</span></div>
+          <div class="rounded-2xl border border-white/10 bg-white/[.05] p-5 sm:p-7"><strong data-i18n="statV4" class="brand text-3xl tracking-[-.06em] sm:text-4xl">60 jt</strong><p data-i18n="stat4" class="mt-2 text-sm leading-6 text-white/60">pengguna aktif yang dilayani</p><span data-i18n="statS4" class="mt-4 block text-[10px] text-white/35">Portal hukum BKPM · bersama perusahaan mitra</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
+      <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <div><p data-i18n="workLabel" class="text-xs font-bold uppercase tracking-[.18em] text-[#fa5b35]">KARYA PILIHAN</p><h2 data-i18n="workTitle" class="mt-4 text-4xl font-semibold tracking-[-.06em] sm:text-5xl">Masalah rumit, jadi bisa ditangani.</h2><p data-i18n="workIntro" class="mt-4 max-w-md text-sm leading-6 text-[#777a72]">Beberapa contoh pekerjaan produk dan sistem yang telah dibangun tim kami.</p></div>
+        <div class="flex flex-col items-start gap-2 lg:items-end">
+          <span data-i18n="viewLabel" class="text-xs font-semibold text-[#777a72]">Jelaskan untuk</span>
+          <div class="seg inline-flex rounded-full border border-[#dedfd7] bg-white p-1" role="group" aria-label="Explanation style">
+            <button type="button" data-view="biz" aria-pressed="true" data-i18n="viewBiz" class="rounded-full px-4 py-2 text-xs font-bold text-[#62665e] transition">Pebisnis</button>
+            <button type="button" data-view="tech" aria-pressed="false" data-i18n="viewTech" class="rounded-full px-4 py-2 text-xs font-bold text-[#62665e] transition">Tim teknis</button>
+          </div>
+        </div>
+      </div>
+      <div id="caseGrid" class="mt-10 grid gap-4 md:grid-cols-2"></div>
+    </section>
+
+    <section id="ai" class="mx-auto max-w-7xl px-5 pb-20 sm:px-8 sm:pb-28 lg:px-12">
+      <div class="grid gap-10 rounded-[2rem] bg-[#22251f] p-7 text-white sm:rounded-[2.5rem] sm:p-12 lg:grid-cols-[.85fr_1.15fr] lg:p-14">
+        <div>
+          <p data-i18n="aiLabel" class="text-xs font-bold uppercase tracking-[.18em] text-[#d4ed8b]">CLASSICAL ML · AGENTIC AI</p>
+          <h2 data-i18n="aiTitle" class="mt-5 max-w-md text-4xl font-semibold leading-tight tracking-[-.06em] sm:text-5xl">AI bukan cuma chatbot.</h2>
+          <p data-i18n="aiBody" class="mt-5 max-w-md leading-7 text-white/60">Tidak semua masalah perlu model bahasa besar. Menebak penjualan, menilai risiko kredit, atau membaca foto sering lebih murah dan lebih gampang dijelaskan dengan machine learning klasik. Untuk pekerjaan yang beberapa langkah, kami bangun agen AI yang bisa mencari, menimbang, lalu bertindak dengan batas yang jelas. Kami pilih yang pas dengan masalahnya, bukan yang sedang ramai.</p>
+          <figure class="mt-8 max-w-md border-l-2 border-[#f5c84c] pl-5">
+            <blockquote data-i18n="aiQuote" class="text-lg font-medium leading-snug">“Bisa classical ML juga, bukan cuma yang agentic-agentic sekarang?”</blockquote>
+            <figcaption data-i18n="aiQuoteCap" class="mt-2 text-xs text-white/50">Pertanyaan dari calon klien. Jawabannya: bisa dua-duanya.</figcaption>
+          </figure>
+        </div>
+        <div id="aiGrid" class="grid gap-3 sm:grid-cols-2"></div>
+      </div>
+    </section>
+
+    <section id="try" class="mx-auto max-w-7xl px-5 pb-20 sm:px-8 sm:pb-28 lg:px-12">
+      <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <div><p data-i18n="tryLabel" class="text-xs font-bold uppercase tracking-[.18em] text-[#fa5b35]">COBA SENDIRI</p><h2 data-i18n="tryTitle" class="mt-4 text-4xl font-semibold tracking-[-.06em] sm:text-5xl">Jangan cuma dibaca. Langsung coba.</h2><p data-i18n="tryIntro" class="mt-4 max-w-md text-sm leading-6 text-[#777a72]">Prototipe yang bisa Anda jalankan sendiri. Datanya contoh, jadi bebas diutak-atik.</p></div>
+        <div id="tryFilter" class="flex flex-wrap gap-2 lg:shrink-0 lg:flex-nowrap" role="group" aria-label="Filter by category"></div>
+      </div>
+      <div id="tryGrid" class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+      <p id="tryEmpty" class="mt-10 hidden rounded-2xl border border-dashed border-[#dedfd7] p-8 text-center text-sm text-[#777a72]"></p>
+    </section>
+
+    <section id="team" class="border-y border-[#e3e3dc] bg-white/55">
+      <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
+        <div class="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+          <div><p data-i18n="teamLabel" class="text-xs font-bold uppercase tracking-[.18em] text-[#fa5b35]">TIM SENIOR YANG RINGKAS</p><h2 data-i18n="teamTitle" class="mt-4 text-4xl font-semibold tracking-[-.06em]">Pengalaman nyata. Kolaborasi langsung.</h2></div>
+          <p class="flex max-w-sm items-start gap-3 rounded-2xl border border-[#e3e3dc] bg-white px-4 py-3 text-sm leading-6 text-[#62665e]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#fa5b35]"></span><span data-i18n="teamNote">Tim inti kami 3 orang. Butuh tenaga lebih? Kami tambah orang sesuai kebutuhan proyek Anda.</span></p>
+        </div>
+        <div id="teamGrid" class="mt-10 grid gap-4 md:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
+      <div class="relative overflow-hidden rounded-[2rem] bg-[#d4ed8b] p-6 sm:rounded-[2.5rem] sm:p-12 lg:p-16"><div class="absolute -right-8 -top-14 h-48 w-48 rounded-full border-[30px] border-[#20231f]/[.06] sm:h-72 sm:w-72 sm:border-[45px]"></div>
+        <div class="relative grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-14">
+          <div>
+            <p data-i18n="contactLabel" class="text-xs font-bold uppercase tracking-[.18em] text-[#52623b]">TANPA TEKANAN. MULAI DENGAN OBROLAN.</p>
+            <h2 data-i18n="contactTitle" class="mt-5 text-4xl font-semibold leading-tight tracking-[-.06em] sm:text-6xl">Mulai dari masalahnya. Bukan penawarannya.</h2>
+            <p data-i18n="contactBody" class="mt-5 max-w-xl leading-7 text-[#52623b]">Ceritakan hambatan yang Anda hadapi. Kami akan mendengarkan, membantu memperjelas masalah, dan jujur menilai apakah solusi layak dieksplorasi.</p>
+            <p data-i18n="contactNote" class="mt-3 text-xs text-[#52623b]">Tanpa komitmen. Tidak ada penawaran di percakapan pertama.</p>
+            <dl class="mt-9 grid gap-5 text-sm sm:grid-cols-2 lg:grid-cols-1">
+              <div><dt data-i18n="cWa" class="text-[11px] font-bold uppercase tracking-[.16em] text-[#52623b]">WhatsApp / telepon</dt><dd class="mt-1"><a data-site="wa" href="#" target="_blank" rel="noopener" class="text-lg font-bold text-[#20231f] underline decoration-[#20231f]/25 underline-offset-4 transition hover:decoration-[#20231f]"></a></dd></div>
+              <div><dt data-i18n="cEmail" class="text-[11px] font-bold uppercase tracking-[.16em] text-[#52623b]">Email</dt><dd class="mt-1"><a data-site="email" href="#" class="break-all text-lg font-bold text-[#20231f] underline decoration-[#20231f]/25 underline-offset-4 transition hover:decoration-[#20231f]"></a></dd></div>
+              <div><dt data-i18n="cLegal" class="text-[11px] font-bold uppercase tracking-[.16em] text-[#52623b]">Badan hukum</dt><dd class="mt-1 font-semibold text-[#20231f]"><span data-site="legal"></span><span class="block text-xs font-normal text-[#52623b]" data-site="city"></span></dd></div>
+            </dl>
+          </div>
+          <form id="leadForm" class="rounded-[1.5rem] bg-white p-5 shadow-[0_24px_60px_-30px_rgba(32,35,31,.35)] sm:p-8">
+            <p data-i18n="fHead" class="text-sm font-semibold text-[#777a72]">Mulai percakapan</p>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <label class="block"><span data-i18n="fName" class="text-sm font-bold">Nama PIC</span><input name="name" required autocomplete="name" class="field"></label>
+              <label class="block"><span data-i18n="fOrg" class="text-sm font-bold">Usaha, sekolah, atau instansi</span><input name="org" required autocomplete="organization" class="field"></label>
+              <label class="block"><span data-i18n="fWa" class="text-sm font-bold">Nomor WhatsApp</span><input name="wa" type="tel" required inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx" pattern="[+0-9 \-]{9,18}" class="field"></label>
+              <label class="block"><span data-i18n="fEmail" class="text-sm font-bold">Alamat email <span class="font-normal text-[#777a72]">(opsional)</span></span><input name="email" type="email" autocomplete="email" class="field"></label>
+              <label class="block sm:col-span-2"><span data-i18n="fService" class="text-sm font-bold">Layanan yang dibutuhkan</span><select id="serviceSelect" name="service" required class="field"></select></label>
+              <label class="block sm:col-span-2"><span data-i18n="fMsg" class="text-sm font-bold">Ceritakan kebutuhan</span><textarea name="message" required rows="5" data-i18n-ph="fMsgPh" placeholder="Contoh: stok masih dicatat di Excel per cabang, kami ingin semuanya terlihat di satu tempat." placeholder="Contoh: stok masih dicatat di Excel per cabang, kami ingin semuanya terlihat di satu tempat." class="field resize-y"></textarea></label>
+            </div>
+            <p data-i18n="fSafe" class="mt-4 text-xs leading-5 text-[#777a72]">Jangan kirim KTP, kata sandi, atau dokumen sensitif di tahap ini.</p>
+            <label class="mt-5 flex items-start gap-3 text-sm leading-6 text-[#20231f]"><input type="checkbox" name="consent" required class="mt-1 h-5 w-5 shrink-0 accent-[#20231f]"><span data-i18n="fConsent">Saya setuju data ini dipakai untuk menindaklanjuti pengajuan saya.</span></label>
+            <button type="submit" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#20231f] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#fa5b35]"><span id="submitLabel">Send via WhatsApp</span><span class="ml-2">↗</span></button>
+            <p id="formStatus" role="status" aria-live="polite" class="mt-3 text-center text-xs leading-5 text-[#777a72]"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mx-auto flex max-w-7xl flex-col gap-3 border-t border-[#e3e3dc] px-5 py-7 text-xs text-[#777a72] sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12"><a href="#top" class="inline-flex items-center gap-2" aria-label="RekaInsta, ke awal halaman"><svg class="h-5 w-5 shrink-0" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect x="8" y="8" width="38" height="38" rx="4" class="mk-base"/><path d="M54 8 H73 A19 19 0 0 1 73 46 H54 Z" fill="#FA5B35"/><rect x="8" y="54" width="38" height="38" rx="4" class="mk-base"/><path d="M54 54 L92 92 H58 A4 4 0 0 1 54 88 Z" class="mk-base"/></svg><span class="lockup-word" style="font-size:13px">REKAINSTA</span></a><span data-i18n="footer">Produk · Sistem · AI — Berangkat dari masalah yang penting.</span><span>© <span id="year"></span> RekaInsta · <span data-site="legal"></span></span></footer>
+
+  <script>
+    const copy = {
+      en: {
+        navApproach:'Our approach',navWork:'Selected work',navTeam:'The team',navCta:'Let’s talk',eyebrow:'PRODUCT · SYSTEMS · AI',heroTitle:'Make the next move <span class="text-[#fa5b35]">faster.</span>',heroBody:'We turn your business’s core problem into a clear solution—and an interactive prototype your team can experience, fast.',heroCta:'See how we work',heroNote:'From core problem to go-to-market.',demoLabel:'THE FIRST STEP',demoQuestion:'What’s the one thing slowing your business down?',demoStep1:'Find the core problem',demoStep2:'Prototype the solution',demoStep3:'Choose what happens next',demoFoot:'A working front-end demo. A real conversation. No pressure to continue.',value1Title:'Grow revenue',value1Body:'Build around opportunities worth pursuing.',value2Title:'Run more efficiently',value2Body:'Reduce the friction in everyday operations.',value3Title:'Move faster',value3Body:'Get from idea to a solution your team can test.',approachLabel:'A BETTER WAY TO BEGIN',approachTitle:'See the solution before you commit to building it.',approachBody:'Big software projects shouldn’t begin with guesswork. We start by understanding the business problem, then quickly shape it into an interactive front-end prototype. Your decision-makers can try the flow, challenge the idea, and decide whether it deserves a full build.',step1Title:'Get to the real issue',step1Body:'An initial conversation to understand where the friction—and opportunity—really sits.',step2Title:'Make it tangible',step2Body:'A paid solution exploration produces an interactive, front-end-only demo of the core flow.',step3Title:'Choose your next step',step3Body:'Continue into production development—or stop with the demo and solution summary.',processNote:'Prototype speed is not a shortcut around production engineering. Full development follows standard software development practices.',proofLabel:'BUILT FOR REAL-WORLD COMPLEXITY',proofTitle:'Not just ideas. Systems people rely on.',proofBody:'Our team has worked on products and systems across finance, commerce, public services, and AI. Selected results below include work delivered with partner companies.',stat1:'financing disbursed to small businesses',stat2:'small-business customers',stat3:'applicants in one admissions season',stat4:'active users served',workLabel:'SELECTED WORK',workTitle:'Complex problems, made workable.',workIntro:'A few examples of the systems and product work our team has helped deliver.',case1Tag:'FINANCING · DIGITAL SYSTEM',case1Title:'Credit decisions, from 55 days to 22.',case1Body:'A digital financing system helped streamline the journey from application through approval and disbursement.',case2Tag:'PUBLIC SERVICE · PLATFORM',case2Title:'Admissions for 900,000+ applicants.',case2Body:'A high-stakes school admissions platform built for traceability, fairness, and peak-season demand.',case3Tag:'OPERATIONS · INVENTORY',case3Title:'Stock visibility across a national network.',case3Body:'A monitoring system brought stock and sales visibility across agents and depots.',case4Tag:'AI · CUSTOMER SERVICE',case4Title:'Answers grounded in official sources.',case4Body:'A WhatsApp assistant helps answer recurring questions using trusted source documents.',partnerNote:'Pertamina Patra Niaga · delivered with partner company',partnerNote2:'BKPM · delivered with partner company',teamLabel:'SMALL SENIOR TEAM',teamTitle:'Experienced hands. Direct collaboration.',role1:'Product & Projects',bio1:'Product delivery and business-focused problem solving.',role2:'Systems Architect',bio2:'Reliable systems designed for real-world scale.',role3:'AI & Software',bio3:'Practical AI and software built for useful outcomes.',contactLabel:'NO PRESSURE. JUST A CONVERSATION.',contactTitle:'Start with the problem. Not a pitch.',contactBody:'Tell us what’s getting in the way. We’ll listen, help clarify the problem, and be honest about whether it makes sense to explore a solution.',contactTbd:'Contact details coming soon',contactNote:'No commitment. No sales pitch in the first conversation.',footer:'Products · Systems · AI — Built around the problem that matters.',logoTag:'PRODUCTS · SYSTEMS · AI',statV1:'Rp 230B',statV2:'10,000+',statV3:'900,000+',statV4:'60M',statS1:'eFishery Kabayan · with funding partners',statS2:'eFishery Kabayan',statS3:'West Java SPMB 2026',statS4:'BKPM legal portal · with partner company',navTry:'Try a prototype',viewLabel:'Explain it for',viewBiz:'Business owners',viewTech:'Technical teams',aiLabel:'CLASSICAL ML · AGENTIC AI',aiTitle:'AI is more than a chatbot.',aiBody:'Not every problem needs a large language model. Forecasting, risk scoring, and reading images are often cheaper and easier to explain with classical machine learning. For multi-step work, we build AI agents that look things up, weigh them, and act within clear limits. We pick what fits the problem, not what is trending.',aiQuote:'“Can you do classical ML too, not just the agentic stuff?”',aiQuoteCap:'A prospective client asked. The answer: yes, both.',tryLabel:'TRY IT YOURSELF',tryTitle:'Don’t just read about it. Click through it.',tryIntro:'Working prototypes you can operate yourself. They run on sample data, so feel free to break things.',teamNote:'Our core team is three people. Need more hands? We bring them in to fit your project.',cWa:'WhatsApp / phone',cEmail:'Email',cLegal:'Legal entity',fHead:'Start a conversation',fName:'Your name',fOrg:'Business, school, or agency',fWa:'WhatsApp number',fEmail:'Email <span class="font-normal text-[#777a72]">(optional)</span>',fService:'Service you need',fMsg:'Tell us what you need',fMsgPh:'Example: our stock is still tracked in Excel per branch, and we want to see it all in one place.',fSafe:'Please don’t send ID cards, passwords, or other sensitive documents at this stage.',fConsent:'I agree that this information may be used to follow up on my enquiry.'
+      },
+      id: {
+        navApproach:'Cara kerja',navWork:'Karya pilihan',navTeam:'Tim kami',navCta:'Mari bicara',eyebrow:'PRODUK · SISTEM · AI',heroTitle:'Melangkah <span class="text-[#fa5b35]">lebih cepat.</span>',heroBody:'Kami mengubah masalah inti bisnis Anda menjadi solusi yang jelas—dan prototipe interaktif yang bisa dicoba tim, dengan cepat.',heroCta:'Lihat cara kerja kami',heroNote:'Dari masalah inti menuju go-to-market.',demoLabel:'LANGKAH PERTAMA',demoQuestion:'Apa satu hal yang paling menghambat bisnis Anda?',demoStep1:'Temukan masalah intinya',demoStep2:'Buat prototipe solusi',demoStep3:'Tentukan langkah berikutnya',demoFoot:'Demo front-end yang bisa dicoba. Percakapan nyata. Tanpa kewajiban untuk lanjut.',value1Title:'Tambah revenue',value1Body:'Bangun solusi untuk peluang yang layak dikejar.',value2Title:'Operasional lebih efisien',value2Body:'Kurangi hambatan dalam pekerjaan sehari-hari.',value3Title:'Bergerak lebih cepat',value3Body:'Ubah ide menjadi solusi yang bisa diuji tim.',approachLabel:'CARA MEMULAI YANG LEBIH BAIK',approachTitle:'Lihat solusinya sebelum berkomitmen membangunnya.',approachBody:'Proyek perangkat lunak besar tak seharusnya dimulai dengan tebak-tebakan. Kami memahami masalah bisnisnya, lalu merumuskannya dengan cepat menjadi prototipe front-end interaktif. Pengambil keputusan bisa mencoba alurnya, menguji idenya, lalu memutuskan apakah solusi itu layak dibangun penuh.',step1Title:'Temukan masalah sebenarnya',step1Body:'Percakapan awal untuk memahami letak hambatan—dan peluang—bisnis Anda.',step2Title:'Wujudkan solusinya',step2Body:'Eksplorasi solusi berbayar menghasilkan demo interaktif front-end untuk alur masalah inti.',step3Title:'Pilih langkah berikutnya',step3Body:'Lanjut ke pengembangan production—atau berhenti dengan demo dan ringkasan solusi.',processNote:'Prototipe cepat bukan jalan pintas untuk rekayasa production. Pengembangan penuh mengikuti praktik standar pengembangan perangkat lunak.',proofLabel:'DIBUAT UNTUK KERUMITAN DUNIA NYATA',proofTitle:'Bukan sekadar ide. Sistem yang diandalkan.',proofBody:'Tim kami mengerjakan produk dan sistem di bidang keuangan, perdagangan, layanan publik, dan AI. Hasil pilihan di bawah mencakup pekerjaan bersama perusahaan mitra.',stat1:'pembiayaan tersalur ke usaha kecil',stat2:'pelaku usaha kecil menjadi pelanggan',stat3:'pendaftar dalam satu musim penerimaan',stat4:'pengguna aktif yang dilayani',workLabel:'KARYA PILIHAN',workTitle:'Masalah rumit, jadi bisa ditangani.',workIntro:'Beberapa contoh pekerjaan produk dan sistem yang telah dibangun tim kami.',case1Tag:'PEMBIAYAAN · SISTEM DIGITAL',case1Title:'Proses kredit, dari 55 hari menjadi 22.',case1Body:'Sistem pembiayaan digital membantu merapikan proses dari pengajuan hingga persetujuan dan pencairan.',case2Tag:'LAYANAN PUBLIK · PLATFORM',case2Title:'Penerimaan untuk 900.000+ pendaftar.',case2Body:'Platform penerimaan siswa dirancang agar dapat ditelusuri, adil, dan siap menghadapi lonjakan pendaftar.',case3Tag:'OPERASIONAL · PERSEDIAAN',case3Title:'Pantau stok di seluruh jaringan.',case3Body:'Sistem pemantauan menghadirkan visibilitas stok dan penjualan di seluruh agen dan pangkalan.',case4Tag:'AI · LAYANAN PELANGGAN',case4Title:'Jawaban merujuk sumber resmi.',case4Body:'Asisten WhatsApp membantu menjawab pertanyaan berulang berdasarkan dokumen sumber tepercaya.',partnerNote:'Pertamina Patra Niaga · dikerjakan bersama perusahaan mitra',partnerNote2:'BKPM · dikerjakan bersama perusahaan mitra',teamLabel:'TIM SENIOR YANG RINGKAS',teamTitle:'Pengalaman nyata. Kolaborasi langsung.',role1:'Produk & Proyek',bio1:'Pengembangan produk dan solusi masalah yang berfokus pada bisnis.',role2:'Arsitek Sistem',bio2:'Sistem andal yang dirancang untuk skala dunia nyata.',role3:'AI & Perangkat Lunak',bio3:'AI dan perangkat lunak praktis untuk hasil yang berguna.',contactLabel:'TANPA TEKANAN. MULAI DENGAN OBROLAN.',contactTitle:'Mulai dari masalahnya. Bukan penawarannya.',contactBody:'Ceritakan hambatan yang Anda hadapi. Kami akan mendengarkan, membantu memperjelas masalah, dan jujur menilai apakah solusi layak dieksplorasi.',contactTbd:'Info kontak segera tersedia',contactNote:'Tanpa komitmen. Tidak ada penawaran di percakapan pertama.',footer:'Produk · Sistem · AI — Berangkat dari masalah yang penting.',logoTag:'PRODUK · SISTEM · AI',statV1:'Rp 230 miliar',statV2:'10.000+',statV3:'900.000+',statV4:'60 jt',statS1:'eFishery Kabayan · bersama mitra pendanaan',statS2:'eFishery Kabayan',statS3:'SPMB Jawa Barat 2026',statS4:'Portal hukum BKPM · bersama perusahaan mitra',navTry:'Coba prototipe',viewLabel:'Jelaskan untuk',viewBiz:'Pebisnis',viewTech:'Tim teknis',aiLabel:'CLASSICAL ML · AGENTIC AI',aiTitle:'AI bukan cuma chatbot.',aiBody:'Tidak semua masalah perlu model bahasa besar. Menebak penjualan, menilai risiko kredit, atau membaca foto sering lebih murah dan lebih gampang dijelaskan dengan machine learning klasik. Untuk pekerjaan yang beberapa langkah, kami bangun agen AI yang bisa mencari, menimbang, lalu bertindak dengan batas yang jelas. Kami pilih yang pas dengan masalahnya, bukan yang sedang ramai.',aiQuote:'“Bisa classical ML juga, bukan cuma yang agentic-agentic sekarang?”',aiQuoteCap:'Pertanyaan dari calon klien. Jawabannya: bisa dua-duanya.',tryLabel:'COBA SENDIRI',tryTitle:'Jangan cuma dibaca. Langsung coba.',tryIntro:'Prototipe yang bisa Anda jalankan sendiri. Datanya contoh, jadi bebas diutak-atik.',teamNote:'Tim inti kami 3 orang. Butuh tenaga lebih? Kami tambah orang sesuai kebutuhan proyek Anda.',cWa:'WhatsApp / telepon',cEmail:'Email',cLegal:'Badan hukum',fHead:'Mulai percakapan',fName:'Nama PIC',fOrg:'Usaha, sekolah, atau instansi',fWa:'Nomor WhatsApp',fEmail:'Alamat email <span class="font-normal text-[#777a72]">(opsional)</span>',fService:'Layanan yang dibutuhkan',fMsg:'Ceritakan kebutuhan',fMsgPh:'Contoh: stok masih dicatat di Excel per cabang, kami ingin semuanya terlihat di satu tempat.',fSafe:'Jangan kirim KTP, kata sandi, atau dokumen sensitif di tahap ini.',fConsent:'Saya setuju data ini dipakai untuk menindaklanjuti pengajuan saya.'
+      }
+    };
+    /* =====================================================================
+       SITE SETTINGS. Ubah di sini saja.
+       - legal      : nama badan hukum (masih placeholder)
+       - email      : kosongkan selama belum ada email tim
+       - wa         : nomor WhatsApp format internasional tanpa "+"
+       - formEndpoint: kosong = formulir membuka WhatsApp berisi pesan siap kirim.
+                       Isi dengan URL Formspree/Getform/Apps Script kalau ingin
+                       data formulir masuk tanpa lewat WhatsApp.
+       ===================================================================== */
+    const SITE = {
+      legal: 'PT [Nama Badan Hukum]',
+      city: 'Bandung, Jawa Barat',
+      email: '',              // kosong = tampil placeholder, tautan email disembunyikan
+      emailPlaceholder: '[alamat email tim]',
+      phone: '0812-2396-0797',
+      wa: '6281223960797',
+      formEndpoint: '',
+      bilingual: true         // false = sembunyikan tombol EN / ID (halaman tetap Bahasa Indonesia)
+    };
+
+    const PEOPLE = {
+      adit: { name: 'Aditia Rafif', short: 'Aditia', initials: 'AR', photo: 'assets/team/aditia.jpg', linkedin: 'https://www.linkedin.com/in/aditia-rafif/' },
+      badrus: { name: 'Badrus Shoolehk', short: 'Badrus', initials: 'BS', photo: 'assets/team/badrus.jpg', linkedin: 'https://www.linkedin.com/in/badrus-shoolehk-al-ar-fanny/' },
+      faishal: { name: 'Faishal Rachman', short: 'Faishal', initials: 'FR', photo: 'assets/team/faishal.jpg', linkedin: 'https://www.linkedin.com/in/faishalrachman-tech/' }
+    };
+
+    const UI = {
+      en: { who: 'Who was involved', partner: 'Delivered with a partner company', visit: 'Visit the live site', internal: 'Client system, not open to the public', biz: 'In plain terms', tech: 'Under the hood', exp: 'Experience', all: 'All', live: 'Live', soon: 'In the works', tryBtn: 'Try the prototype', soonBtn: 'Coming soon', empty: 'Nothing in this category yet. More prototypes are on the way.', pick: 'Choose a service', submitWa: 'Send via WhatsApp', submitForm: 'Send', helpWa: 'Your WhatsApp opens with the message ready. Just press send.', sending: 'Sending…', sent: 'Thank you. Your message has reached us and we will get back to you.', failed: 'Sending failed. Please reach us on WhatsApp instead.', opened: 'WhatsApp is opening in a new tab. Prefer email?', openedNoMail: 'WhatsApp is opening in a new tab. Just press send.', emailLink: 'Send it by email instead', waGreeting: 'Hello RekaInsta, I would like to start a conversation.', lName: 'Name', lOrg: 'Organisation', lWa: 'WhatsApp', lEmail: 'Email', lService: 'Service', lMsg: 'Need', subject: 'New enquiry from the website', proof: 'Track record', people: 'Team', now: 'now' },
+      id: { who: 'Siapa yang terlibat', partner: 'Dikerjakan bersama perusahaan mitra', visit: 'Lihat situsnya', internal: 'Sistem milik klien, tidak dibuka untuk umum', biz: 'Bahasa sederhananya', tech: 'Dari sisi teknis', exp: 'Pengalaman', all: 'Semua', live: 'Bisa dicoba', soon: 'Sedang disiapkan', tryBtn: 'Coba prototipenya', soonBtn: 'Segera hadir', empty: 'Belum ada prototipe di kategori ini. Segera menyusul.', pick: 'Pilih layanan', submitWa: 'Kirim lewat WhatsApp', submitForm: 'Kirim pengajuan', helpWa: 'WhatsApp Anda akan terbuka dengan pesan yang sudah tersusun. Tinggal tekan kirim.', sending: 'Mengirim…', sent: 'Terima kasih. Pesan Anda sudah kami terima dan akan kami hubungi.', failed: 'Gagal terkirim. Silakan hubungi kami lewat WhatsApp.', opened: 'WhatsApp terbuka di tab baru. Lebih suka email?', openedNoMail: 'WhatsApp terbuka di tab baru. Tinggal tekan kirim.', emailLink: 'Kirim lewat email saja', waGreeting: 'Halo RekaInsta, saya ingin mulai percakapan.', lName: 'Nama', lOrg: 'Usaha/instansi', lWa: 'WhatsApp', lEmail: 'Email', lService: 'Layanan', lMsg: 'Kebutuhan', subject: 'Pengajuan baru dari website', proof: 'Bukti', people: 'Tim', now: 'sekarang' }
+    };
+
+    const TAGS = { web: 'Web', mobile: 'Android / iOS', ai: 'AI', hardware: 'Hardware', chatbot: 'AI Chatbot', whatsapp: 'WhatsApp' };
+
+    const SERVICES = [
+      { en: 'Digitising operations (records, stock, reports)', id: 'Digitalisasi operasional (catatan, stok, rekap)' },
+      { en: 'Web application', id: 'Aplikasi web' },
+      { en: 'Android / iOS app', id: 'Aplikasi Android / iOS' },
+      { en: 'AI: classical machine learning', id: 'AI: machine learning klasik' },
+      { en: 'AI: agents and assistants (agentic AI)', id: 'AI: agen & asisten (agentic AI)' },
+      { en: 'Hardware & IoT', id: 'Hardware & IoT' },
+      { en: 'Servers & infrastructure', id: 'Server & infrastruktur' },
+      { en: 'Not sure yet, let’s talk first', id: 'Belum yakin, mau ngobrol dulu' }
+    ];
+
+    /* Studi kasus. team: [kunci PEOPLE, peran en, peran id]. link: null = tidak ada situs publik. */
+    const CASES = [
+      {
+        key: 'kabayan', cats: ['web', 'mobile'], logo: 'assets/case-studies/efishery-logo.png', logoAlt: 'eFishery', logoLabel: 'Kabayan',
+        tag: ['FINANCING · DIGITAL SYSTEM', 'PEMBIAYAAN · SISTEM DIGITAL'],
+        title: ['Credit decisions, from 55 days to 22.', 'Proses kredit, dari 55 hari menjadi 22.'],
+        biz: ['Fish farmers needed working capital, but a credit application took 55 days. We built the journey from application to disbursement and brought it down to 22. Rp 230 billion has reached more than 10,000 customers.',
+              'Pembudidaya ikan butuh modal, tapi pengajuan kredit makan waktu 55 hari. Kami bangun alurnya dari pengajuan sampai pencairan, sekarang cukup 22 hari. Rp 230 miliar sudah tersalur ke lebih dari 10.000 pelanggan.'],
+        tech: ['An early-stage loan origination system (LOS), in-app KYC, and a reworked credit scoring algorithm with 35% better accuracy. API integrations with P2P lenders and banks unlocked an extra Rp 180 billion in disbursement. Funder approval fell from 9.1 to 2.4 days.',
+               'Loan Origination System (LOS) tahap awal, KYC di dalam aplikasi, dan algoritma penilaian kredit yang akurasinya naik 35%. Integrasi API dengan mitra P2P dan bank menambah penyaluran Rp 180 miliar. Persetujuan pendana turun dari 9,1 menjadi 2,4 hari.'],
+        team: [['adit', 'Product Manager', 'Product Manager']],
+        source: ['eFishery Kabayan · with funding partners', 'eFishery Kabayan · bersama mitra pendanaan'], link: null
+      },
+      {
+        key: 'spmb', cats: ['web'], img: 'assets/case-studies/spmb-jawa-barat.jpg', pos: 'object-top', alt: 'West Java SPMB admissions platform, public home page',
+        tag: ['PUBLIC SERVICE · PLATFORM', 'LAYANAN PUBLIK · PLATFORM'],
+        title: ['Admissions for 900,000+ applicants.', 'Penerimaan untuk 900.000+ pendaftar.'],
+        biz: ['A high-stakes school admissions platform built for traceability, fairness, and peak-season demand. Every rank and quota has to hold up under public scrutiny.',
+              'Platform penerimaan siswa yang diawasi publik. Tiap peringkat dan kuota harus adil, bisa ditelusuri, dan tetap jalan saat pendaftar membludak.'],
+        tech: ['Microservices behind an API gateway, with a web app in front. Product logic for multi-stage ranking, capacity quotas, and quota redistribution when applicants withdraw. Data integrity audits run in SQL directly against status logs and verification trails.',
+               'Microservices di balik API gateway, dengan aplikasi web di depannya. Logika peringkat bertahap, kuota daya tampung, dan pengalihan kuota saat pendaftar mundur. Audit integritas data dijalankan lewat SQL langsung ke log status dan jejak verifikasi.'],
+        team: [['adit', 'Product: specs, data audits, handover', 'Produk: spesifikasi, audit data, serah terima'], ['badrus', 'Systems architecture', 'Arsitektur sistem'], ['faishal', 'AI & software', 'AI & perangkat lunak']],
+        source: ['West Java SPMB 2026 · West Java education office', 'SPMB Jawa Barat 2026 · Disdik Jawa Barat'], link: 'https://spmb.jabarprov.go.id/'
+      },
+      {
+        key: 'monica', cats: ['web'], img: 'assets/case-studies/monica-lpg.jpg', pos: '', alt: 'MONICA LPG distribution monitoring dashboard',
+        tag: ['OPERATIONS · INVENTORY', 'OPERASIONAL · PERSEDIAAN'],
+        title: ['Stock visibility across a national network.', 'Pantau stok di seluruh jaringan.'],
+        biz: ['Subsidised 3 kg LPG could leak to the wrong hands, and nobody knew until much later. Now stock and sales at every agent and outlet are visible as they happen.',
+              'Elpiji 3 kg bersubsidi bisa bocor ke tangan yang salah, dan baru ketahuan lama setelahnya. Sekarang stok dan penjualan di tiap agen dan pangkalan terlihat saat itu juga.'],
+        tech: ['A web platform for real-time supply chain monitoring of subsidised LPG. Inventory and sales are recorded at agent and outlet level, for accurate reporting and tighter control of distribution leakage.',
+               'Platform web pemantauan rantai pasok elpiji bersubsidi secara real-time. Persediaan dan penjualan dicatat di level agen dan pangkalan, supaya laporan akurat dan kebocoran distribusi bisa ditekan.'],
+        team: [['badrus', 'Systems architecture', 'Arsitektur sistem']], partner: true,
+        source: ['Pertamina Patra Niaga', 'Pertamina Patra Niaga'], link: null
+      },
+      {
+        key: 'bkpmva', cats: ['chatbot', 'whatsapp'], img: 'assets/case-studies/bkpm-assistant.jpg', pos: 'object-top', alt: 'BKPM WhatsApp virtual assistant',
+        tag: ['AI · CUSTOMER SERVICE', 'AI · LAYANAN PELANGGAN'],
+        title: ['Answers grounded in official sources.', 'Jawaban merujuk sumber resmi.'],
+        biz: ['The same questions kept arriving and staff were swamped. A WhatsApp assistant now answers around the clock from official sources, with the reference attached.',
+              'Pertanyaan yang sama datang terus dan petugas kewalahan. Asisten di WhatsApp sekarang menjawab 24 jam dari sumber resmi, lengkap dengan rujukannya.'],
+        tech: ['A virtual assistant on WhatsApp that automates routine enquiries. Answers are grounded in official source documents and cite them, instead of being generated from the model’s memory.',
+               'Asisten virtual di WhatsApp yang mengotomatiskan pertanyaan rutin. Jawabannya diambil dari dokumen sumber resmi dan menyertakan rujukan, bukan dikarang dari ingatan model.'],
+        team: [['badrus', 'Systems architecture', 'Arsitektur sistem']], partner: true,
+        source: ['BKPM · Ministry of Investment', 'BKPM · Kementerian Investasi'], link: null
+      },
+      {
+        key: 'focus', cats: ['web'], img: 'assets/case-studies/focus-nusantara.jpg', pos: '', alt: 'Focus Nusantara camera and video online store',
+        tag: ['COMMERCE · ONLINE STORE', 'PERDAGANGAN · TOKO ONLINE'],
+        title: ['An online store whose buyers stop leaving.', 'Toko online yang pembelinya tidak lagi pergi.'],
+        biz: ['Thousands of cameras and lenses, but buyers often could not find what they came for, and left. The catalogue was rebuilt so buyers find the item and pay without effort.',
+              'Ribuan kamera dan lensa, tapi pembeli sering tidak menemukan yang dicari, lalu pergi. Katalognya dirapikan supaya pembeli gampang menemukan barang dan membayar.'],
+        tech: ['An e-commerce platform for a large catalogue of high-end gear: advanced filtering down to technical specifications, detailed product data, and a secure checkout.',
+               'Platform e-commerce untuk katalog besar perlengkapan kelas atas: filter lanjutan sampai spesifikasi teknis, data produk yang rinci, dan checkout yang aman.'],
+        team: [['badrus', 'Systems architecture', 'Arsitektur sistem']], partner: true,
+        source: ['Focus Nusantara', 'Focus Nusantara'], link: 'https://focusnusantara.com/'
+      }
+    ];
+
+    const AI_TRACKS = [
+      {
+        name: ['Classical machine learning', 'Machine learning klasik'],
+        desc: ['Models trained on your own data to predict, score, and recognise. Cheaper to run, and you can see why they decide what they decide.',
+               'Model yang dilatih dari data Anda sendiri untuk menebak, menilai, dan mengenali. Lebih hemat dijalankan, dan alasan keputusannya bisa dilihat.'],
+        proof: [['Credit scoring accuracy up 35%', 'Akurasi penilaian kredit naik 35%', 'eFishery Kabayan'],
+                ['Handwriting OCR for field staff, from concept to production', 'OCR tulisan tangan untuk petugas lapangan, dari konsep sampai produksi', 'eFishery'],
+                ['Object detection, segmentation, and XGBoost models for aquaculture', 'Deteksi objek, segmentasi gambar, dan model XGBoost untuk tambak', 'eFishery R&D']],
+        people: ['faishal', 'adit']
+      },
+      {
+        name: ['Agentic AI', 'Agentic AI'],
+        desc: ['Assistants that do more than answer: they search your documents, check, then draft a reply or take the next step, within limits you set.',
+               'Asisten yang tidak cuma menjawab: mencari di dokumen Anda, mengecek, lalu menyusun jawaban atau menjalankan langkah berikutnya, dalam batas yang Anda tentukan.'],
+        proof: [['Production RAG for legal work, with evaluation and guardrails', 'Sistem RAG untuk praktisi hukum, dengan evaluasi dan guardrails', 'Gani.AI'],
+                ['AI agents and decision intelligence for regulated enterprises', 'AI agent dan decision intelligence untuk perusahaan yang ketat aturan', 'X-Decisions'],
+                ['End-to-end LLM systems with LangGraph: data, fine-tuning, deployment, evaluation', 'Sistem LLM end-to-end dengan LangGraph: data, fine-tuning, deployment, evaluasi', 'eFishery R&D']],
+        people: ['faishal', 'badrus']
+      }
+    ];
+
+    /* Prototipe yang bisa dicoba. status: 'live' atau 'soon'. tags: web | mobile | ai | hardware */
+    const PROTOTYPES = [
+      {
+        status: 'live', year: '2026', tags: ['web'], link: 'https://aditrapip.github.io/trial-store-management/',
+        shot: 'assets/prototypes/stok-sparepart-gudang.jpg',
+        shotAlt: ['3D warehouse map: rack B-2 selected, its parts and stock status listed beside it', 'Peta gudang 3D: rak B-2 dipilih, isi dan status stoknya tampil di samping'],
+        title: ['Spare-part stock & sales for a motorcycle dealer', 'Stok & penjualan sparepart dealer motor'],
+        desc: ['Find a part in seconds, see its rack on a 3D warehouse map, record goods in and out, then go from quotation to delivery note and invoice.',
+               'Cari sparepart dalam hitungan detik, lihat raknya di peta gudang 3D, catat barang masuk dan keluar, sampai buat penawaran, surat jalan, dan invoice.'],
+        note: ['Sign in with any name and pick a role: admin, warehouse head, or staff. Sample data is stored in your own browser only.',
+               'Masuk pakai nama bebas, lalu pilih peran: admin, kepala gudang, atau staf. Data contoh hanya tersimpan di browser Anda.']
+      },
+      {
+        status: 'soon', tags: ['ai', 'web'],
+        title: ['Ask your own documents', 'Tanya jawab dari dokumen Anda'],
+        desc: ['Upload an SOP or a product catalogue, then ask anything. Every answer points to the page it came from.',
+               'Unggah SOP atau katalog produk, lalu tanya apa saja. Tiap jawaban menunjuk halaman sumbernya.']
+      },
+      {
+        status: 'soon', tags: ['ai', 'web'],
+        title: ['Know which stock runs out next week', 'Tahu stok mana yang habis minggu depan'],
+        desc: ['A classical machine learning forecast from your sales history, so reorders happen before the shelf is empty.',
+               'Perkiraan dengan machine learning klasik dari riwayat penjualan, supaya pesan ulang dilakukan sebelum rak kosong.']
+      },
+      {
+        status: 'soon', tags: ['hardware', 'mobile'],
+        title: ['Sensors that report to your phone', 'Sensor yang lapor ke HP Anda'],
+        desc: ['Small devices that read conditions on site and send them to an Android or iOS app over Bluetooth or Wi-Fi.',
+               'Perangkat kecil yang membaca kondisi di lapangan lalu mengirimnya ke aplikasi Android atau iOS lewat Bluetooth atau Wi-Fi.']
+      }
+    ];
+
+    const TEAM = [
+      {
+        key: 'adit', role: ['Product & Projects', 'Produk & Proyek'],
+        bio: ['Six years building products from zero, from fintech lending to province-wide public admissions.', 'Enam tahun membangun produk dari nol, dari pembiayaan digital sampai penerimaan siswa satu provinsi.'],
+        exp: [['2026', 'now', 'Product Consultant', ['West Java education office', 'Disdik Jawa Barat'], 'SPMB Jawa Barat 2026', 'SPMB Jawa Barat 2026'],
+              ['2022', '2025', 'Product Manager', 'eFishery', 'Kabayan B2B lending, sole PM for eFishery India', 'Pembiayaan Kabayan B2B, satu-satunya PM eFishery India'],
+              ['2019', '2022', 'Associate PM · Product Intern', 'eFishery', 'Kabayan B2C, credit process 55 → 22 days', 'Kabayan B2C, proses kredit 55 → 22 hari']]
+      },
+      {
+        key: 'badrus', role: ['Systems Architect', 'Arsitek Sistem'],
+        bio: ['Five years as technical architect on national-scale systems, now leading technology at an AI company.', 'Lima tahun jadi arsitek teknis sistem skala nasional, kini memimpin teknologi di perusahaan AI.'],
+        exp: [['2025', 'now', 'Chief Technology Officer', 'X-Decisions', 'AI decision intelligence: LLM, RAG, AI agents', 'Decision intelligence berbasis AI: LLM, RAG, AI agent'],
+              ['2021', 'now', 'Technical Architect', 'Telkom Indonesia', 'MyPertamina, OSS, BTN SmartProperty', 'MyPertamina, OSS, BTN SmartProperty'],
+              ['2019', '2022', 'Technical Lead · Lead Mobile', 'LawyerIndo · Heylaw', 'Legal-tech web and mobile apps', 'Aplikasi web dan mobile legal-tech']]
+      },
+      {
+        key: 'faishal', role: ['AI & Software', 'AI & Perangkat Lunak'],
+        bio: ['Takes AI from research to production: computer vision, classical ML, and LLM systems.', 'Membawa AI dari riset sampai dipakai: computer vision, machine learning klasik, dan sistem LLM.'],
+        exp: [['2025', 'now', 'Generative AI Engineer', 'Gani.AI', 'RAG systems for legal practitioners', 'Sistem RAG untuk praktisi hukum'],
+              ['2023', '2025', 'Research Lead · AIoT R&D Technical Manager', 'eFishery', '15 researchers, 10 patents filed (2 granted)', '15 peneliti, 10 paten didaftarkan (2 terbit)'],
+              ['2019', '2023', 'Research Engineer · Android Engineer', 'eFishery', 'Computer vision, IoT, BLE devices', 'Computer vision, IoT, perangkat BLE']]
+      }
+    ];
+
+    let view = 'biz';
+    let tagFilter = 'all';
+    const L = () => (lang === 'id' ? 1 : 0);
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    function avatar(key, size) {
+      const p = PEOPLE[key];
+      return `<span class="relative inline-flex ${size} shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#edf1f8] text-[10px] font-bold text-[#5b6f9a]">${p.initials}<img src="${p.photo}" alt="" class="absolute inset-0 h-full w-full object-cover" onerror="this.remove()"></span>`;
+    }
+
+    function renderCases() {
+      const u = UI[lang], i = L();
+      document.getElementById('caseGrid').innerHTML = CASES.map((c, n) => {
+        const wide = CASES.length % 2 === 1 && n === CASES.length - 1;
+        const media = c.logo
+          ? `<div class="flex aspect-[1.7] items-center justify-center bg-[#eaf8f2]"><div class="flex w-full items-center justify-center gap-4 px-6 transition duration-700 group-hover:scale-[1.035] sm:gap-5"><img src="${c.logo}" alt="${esc(c.logoAlt)}" class="w-[38%] max-w-[200px]" loading="lazy" decoding="async">${c.logoLabel ? `<span class="h-12 w-[2px] rounded-full bg-[#1E5E50]/35 sm:h-16" aria-hidden="true"></span><span class="brand text-[28px] font-extrabold leading-none tracking-[-.04em] text-[#1E5E50] sm:text-[44px]">${c.logoLabel}</span>` : ''}</div></div>`
+          : c.img
+          ? `<div class="case-image-wrap aspect-[1.7] overflow-hidden bg-[#edf1f8]"><img src="${c.img}" alt="${esc(c.alt)}" class="h-full w-full object-cover ${c.pos} transition duration-700 group-hover:scale-[1.035]" loading="lazy" decoding="async"></div>`
+          : `<div class="grid aspect-[1.7] grid-cols-2 gap-px overflow-hidden bg-white/10 bg-[#22251f]">${c.metrics.map(m => `<div class="flex flex-col justify-end bg-[#22251f] p-5 text-white sm:p-6"><strong class="brand text-2xl tracking-[-.06em] sm:text-3xl">${m[i]}</strong><span class="mt-1 text-xs text-white/55">${m[2 + i]}</span></div>`).join('')}</div>`;
+        const who = c.team.length
+          ? c.team.map(t => `<span class="inline-flex items-center gap-2 rounded-full border border-[#e3e3dc] bg-[#f7f7f2] py-1 pl-1 pr-3 text-xs">${avatar(t[0], 'h-6 w-6')}<b>${PEOPLE[t[0]].short}</b><span class="text-[#777a72]">${esc(t[1 + i])}</span></span>`).join('')
+          : '';
+        const partner = c.partner ? `<span class="inline-flex items-center rounded-full border border-dashed border-[#cbd3e1] px-3 py-1 text-xs text-[#5b6f9a]">${u.partner}</span>` : '';
+        const cta = c.link
+          ? `<a href="${c.link}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-[#20231f] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#fa5b35]">${u.visit}<span class="ml-2">↗</span></a>`
+          : `<span class="text-xs text-[#8a94a7]">${c.linkNote ? c.linkNote[i] : u.internal}</span>`;
+        const mediaBox = wide ? `<div class="md:w-1/2 md:shrink-0 md:[&>div]:h-full md:[&>div]:aspect-auto">${media}</div>` : media;
+        return `<article class="case-card group flex flex-col overflow-hidden rounded-[1.5rem] border border-[#dfe3ec] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#263b68]/10 ${wide ? 'md:col-span-2 md:flex-row' : ''}">${mediaBox}
+          <div class="flex flex-1 flex-col p-6 sm:p-8">
+            <div class="flex flex-wrap gap-2">${(c.cats || []).map(t => `<span class="rounded-full bg-[#f1f5ff] px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-[#5b6f9a]">${TAGS[t]}</span>`).join('')}</div>
+            <span class="mt-4 text-xs font-bold uppercase tracking-widest text-[#5b6f9a]">${c.tag[i]}</span>
+            <h3 class="mt-5 max-w-md text-3xl font-semibold tracking-[-.05em]">${c.title[i]}</h3>
+            <p class="mt-4 text-[10px] font-bold uppercase tracking-widest text-[#fa5b35]">${view === 'tech' ? u.tech : u.biz}</p>
+            <p class="case-body mt-2 max-w-lg text-sm leading-6 text-[#62665e]">${view === 'tech' ? c.tech[i] : c.biz[i]}</p>
+            <div class="mt-6 border-t border-[#eceee8] pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-widest text-[#8a94a7]">${u.who}</p>
+              <div class="mt-2 flex flex-wrap gap-2">${who}${partner}</div>
+            </div>
+            <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-6"><span class="text-[10px] text-[#777a72]">${c.source[i]}</span>${cta}</div>
+          </div></article>`;
+      }).join('');
+    }
+
+    function renderAI() {
+      const u = UI[lang], i = L();
+      document.getElementById('aiGrid').innerHTML = AI_TRACKS.map(t => `
+        <article class="flex flex-col rounded-2xl border border-white/10 bg-white/[.05] p-5 sm:p-6">
+          <h3 class="text-xl font-semibold tracking-[-.04em]">${t.name[i]}</h3>
+          <p class="mt-2 text-sm leading-6 text-white/60">${t.desc[i]}</p>
+          <p class="mt-5 text-[10px] font-bold uppercase tracking-widest text-[#d4ed8b]">${u.proof}</p>
+          <ul class="mt-2 space-y-3">${t.proof.map(p => `<li class="text-sm leading-5"><span class="block">${p[i]}</span><span class="text-[10px] text-white/40">${p[2]}</span></li>`).join('')}</ul>
+          <div class="mt-auto flex items-center gap-2 pt-6">${t.people.map(k => avatar(k, 'h-7 w-7')).join('')}<span class="ml-1 text-xs text-white/55">${t.people.map(k => PEOPLE[k].short).join(' & ')}</span></div>
+        </article>`).join('');
+    }
+
+    function renderTry() {
+      const u = UI[lang], i = L();
+      const chips = ['all', 'web', 'mobile', 'ai', 'hardware'];
+      document.getElementById('tryFilter').innerHTML = chips.map(k =>
+        `<button type="button" data-tag="${k}" aria-pressed="${tagFilter === k}" class="chip rounded-full border border-[#dedfd7] bg-white px-4 py-2 text-xs font-bold text-[#62665e] transition hover:border-[#20231f]">${k === 'all' ? u.all : TAGS[k]}</button>`).join('');
+      const list = PROTOTYPES.filter(p => tagFilter === 'all' || p.tags.includes(tagFilter));
+      document.getElementById('tryGrid').innerHTML = list.map(p => {
+        const live = p.status === 'live';
+        const badge = live
+          ? `<span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#3f7a2a]"><span class="h-2 w-2 rounded-full bg-[#5cb338]"></span>${u.live}</span>`
+          : `<span class="text-xs font-semibold text-[#8a94a7]">${u.soon}</span>`;
+        const year = p.year ? `<span class="rounded-full border border-[#e3e3dc] px-2.5 py-1 text-[11px] font-bold tabular-nums text-[#62665e]">${p.year}</span>` : '';
+        const btn = live
+          ? `<a href="${p.link}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-[#fa5b35] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#dd4828]">${u.tryBtn}<span class="ml-2">↗</span></a>`
+          : `<span class="inline-flex cursor-not-allowed items-center rounded-full bg-[#20231f]/[.06] px-5 py-3 text-sm font-bold text-[#20231f]/40" aria-disabled="true">${u.soonBtn}</span>`;
+        const inner = `
+          <div class="flex flex-wrap items-center justify-between gap-3"><div class="flex flex-wrap gap-2">${p.tags.map(t => `<span class="rounded-full bg-[#f1f5ff] px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-[#5b6f9a]">${TAGS[t]}</span>`).join('')}</div><div class="flex items-center gap-3">${year}${badge}</div></div>
+          <h3 class="mt-6 text-2xl font-semibold tracking-[-.05em]">${p.title[i]}</h3>
+          <p class="mt-3 text-sm leading-6 text-[#62665e]">${p.desc[i]}</p>
+          ${p.note ? `<p class="mt-3 text-xs leading-5 text-[#777a72]">${p.note[i]}</p>` : ''}
+          <div class="mt-auto pt-7">${btn}</div>`;
+        if (p.shot) return `<article class="flex flex-col overflow-hidden rounded-[1.5rem] border border-[#20231f]/15 bg-white shadow-sm md:col-span-2 lg:col-span-3 lg:flex-row">
+          <div class="flex flex-col p-6 sm:p-8 lg:w-1/2 lg:p-10">${inner}</div>
+          <a href="${p.link}" target="_blank" rel="noopener" class="group flex items-center bg-[#f1f5ff] p-4 sm:p-6 lg:w-1/2 lg:p-8" aria-label="${u.tryBtn}">
+            <div class="w-full overflow-hidden rounded-xl border border-[#17233D]/10 bg-white shadow-[0_24px_50px_-28px_rgba(23,35,61,.45)] transition duration-500 group-hover:-translate-y-1">
+              <div class="flex items-center gap-1.5 border-b border-[#eceee8] bg-[#fbfcfe] px-3 py-2"><span class="h-2 w-2 rounded-full bg-[#dfe3ea]"></span><span class="h-2 w-2 rounded-full bg-[#dfe3ea]"></span><span class="h-2 w-2 rounded-full bg-[#dfe3ea]"></span></div>
+              <img src="${p.shot}" alt="${esc(p.shotAlt[i])}" class="block w-full" loading="lazy" decoding="async">
+            </div></a></article>`;
+        return `<article class="flex flex-col rounded-[1.5rem] border ${live ? 'border-[#20231f]/15 bg-white shadow-sm' : 'border-[#e3e3dc] bg-white/60'} p-6 sm:p-8">${inner}</article>`;
+      }).join('');
+      const empty = document.getElementById('tryEmpty');
+      empty.textContent = u.empty;
+      empty.classList.toggle('hidden', list.length > 0);
+    }
+
+    function renderTeam() {
+      const u = UI[lang], i = L();
+      document.getElementById('teamGrid').innerHTML = TEAM.map(m => {
+        const p = PEOPLE[m.key];
+        return `<article class="flex flex-col rounded-2xl border border-[#e3e3dc] bg-white p-5 sm:p-6">
+          <div class="flex items-center gap-4">
+            <div class="relative flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-[#edf1f8]"><span class="brand text-2xl font-bold text-[#5b6f9a]">${p.initials}</span><img src="${p.photo}" alt="${esc(p.name)}" class="absolute inset-0 h-full w-full object-cover" loading="lazy" onerror="this.remove()"></div>
+            <div><h3 class="font-bold">${p.name}</h3><p class="mt-1 text-sm text-[#777a72]">${m.role[i]}</p>${p.linkedin ? `<a href="${p.linkedin}" target="_blank" rel="noopener" class="mt-2 inline-flex items-center text-xs font-bold text-[#5b6f9a] underline decoration-[#5b6f9a]/30 underline-offset-4 transition hover:text-[#20231f]">LinkedIn<span class="ml-1">↗</span></a>` : ''}</div>
+          </div>
+          <p class="mt-5 text-sm leading-6 text-[#62665e]">${m.bio[i]}</p>
+          <p class="mt-6 text-[10px] font-bold uppercase tracking-widest text-[#8a94a7]">${u.exp}</p>
+          <ol class="mt-3 space-y-4 border-l border-[#e3e3dc] pl-4">${m.exp.map(e => `<li><span class="block text-[11px] font-bold text-[#fa5b35]">${e[0]}–${e[1] === 'now' ? u.now : e[1]}</span><span class="block text-sm font-semibold">${e[2]}</span><span class="block text-xs leading-5 text-[#777a72]">${Array.isArray(e[3]) ? e[3][i] : e[3]} · ${e[4 + i]}</span></li>`).join('')}</ol>
+        </article>`;
+      }).join('');
+    }
+
+    function renderContact() {
+      const u = UI[lang];
+      document.querySelectorAll('[data-site="legal"]').forEach(el => { el.textContent = SITE.legal; });
+      document.querySelectorAll('[data-site="city"]').forEach(el => { el.textContent = SITE.city; });
+      document.querySelectorAll('[data-site="email"]').forEach(el => {
+        el.textContent = SITE.email || SITE.emailPlaceholder;
+        if (SITE.email) el.href = 'mailto:' + SITE.email; else { el.removeAttribute('href'); el.classList.add('no-underline', 'text-[#52623b]'); }
+      });
+      document.querySelectorAll('[data-site="wa"]').forEach(el => { el.textContent = SITE.phone; el.href = 'https://wa.me/' + SITE.wa; });
+      const sel = document.getElementById('serviceSelect');
+      const keep = sel.selectedIndex;
+      sel.innerHTML = `<option value="" disabled>${u.pick}</option>` + SERVICES.map((s, k) => `<option value="${k}">${s[lang]}</option>`).join('');
+      sel.selectedIndex = keep > 0 ? keep : 0;
+      document.getElementById('submitLabel').textContent = SITE.formEndpoint ? u.submitForm : u.submitWa;
+      document.getElementById('formStatus').textContent = SITE.formEndpoint ? '' : u.helpWa;
+    }
+
+    function renderAll() {
+      renderCases(); renderAI(); renderTry(); renderTeam(); renderContact();
+      document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === view)));
+    }
+
+    function initInteractive() {
+      document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => {
+        view = b.dataset.view;
+        try { localStorage.setItem('rekainsta-view', view); } catch (_) {}
+        renderAll();
+      }));
+      try { if (localStorage.getItem('rekainsta-view') === 'tech') view = 'tech'; } catch (_) {}
+      document.getElementById('tryFilter').addEventListener('click', e => {
+        const b = e.target.closest('[data-tag]');
+        if (!b) return;
+        tagFilter = b.dataset.tag;
+        renderTry();
+      });
+      const form = document.getElementById('leadForm');
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        const u = UI[lang], d = new FormData(form);
+        const service = SERVICES[Number(d.get('service'))][lang];
+        const lines = [u.waGreeting, '', `${u.lName}: ${d.get('name')}`, `${u.lOrg}: ${d.get('org')}`, `${u.lWa}: ${d.get('wa')}`];
+        if (d.get('email')) lines.push(`${u.lEmail}: ${d.get('email')}`);
+        lines.push(`${u.lService}: ${service}`, '', `${u.lMsg}:`, String(d.get('message')));
+        const text = lines.join('\n');
+        const status = document.getElementById('formStatus');
+        const mail = `mailto:${SITE.email}?subject=${encodeURIComponent(u.subject)}&body=${encodeURIComponent(text)}`;
+        if (SITE.formEndpoint) {
+          status.textContent = u.sending;
+          try {
+            const res = await fetch(SITE.formEndpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: d });
+            if (!res.ok) throw new Error(res.status);
+            status.textContent = u.sent;
+            form.reset();
+          } catch (_) { status.innerHTML = SITE.email ? `${u.failed} <a class="font-bold underline" href="${mail}">${u.emailLink}</a>` : u.failed; }
+          return;
+        }
+        const url = `https://wa.me/${SITE.wa}?text=${encodeURIComponent(text)}`;
+        const win = window.open(url, '_blank');
+        if (win) win.opener = null; else location.href = url;
+        status.innerHTML = SITE.email ? `${u.opened} <a class="font-bold text-[#20231f] underline" href="${mail}">${u.emailLink}</a>` : u.openedNoMail;
+      });
+    }
+
+    let lang = 'id';
+    const languageButton = document.getElementById('language');
+    function setLanguage(next) {
+      lang = next;
+      document.documentElement.lang = next;
+      document.title = next === 'en' ? 'RekaInsta — Make the next move, faster' : 'RekaInsta — Melangkah lebih cepat';
+      document.querySelectorAll('[data-i18n]').forEach(el => { if (copy[next][el.dataset.i18n] !== undefined) el.innerHTML = copy[next][el.dataset.i18n]; });
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = copy[next][el.dataset.i18nPh]; });
+      renderAll();
+      languageButton.innerHTML = next === 'en' ? '<span class="font-extrabold">EN</span> <span class="text-[#aaa99f]">/ ID</span>' : 'EN <span class="text-[#aaa99f]">/</span> <span class="font-extrabold">ID</span>';
+      try { localStorage.setItem('rekainsta-lang', next); } catch (_) {}
+    }
+    languageButton.addEventListener('click', () => setLanguage(lang === 'en' ? 'id' : 'en'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    let savedLang = 'id';
+    if (SITE.bilingual) { try { if (localStorage.getItem('rekainsta-lang') === 'en') savedLang = 'en'; } catch (_) {} }
+    else languageButton.classList.add('hidden');
+    initInteractive();
+    setLanguage(savedLang);
+  </script>
+</body>
+</html>
