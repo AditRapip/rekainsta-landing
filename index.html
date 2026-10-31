@@ -383,17 +383,17 @@
     };
     /* =====================================================================
        SITE SETTINGS. Ubah di sini saja.
-       - legal      : nama badan hukum (masih placeholder)
-       - email      : kosongkan selama belum ada email tim
+       - legal      : nama badan hukum
+       - email      : email tim (sementara memakai email Aditia)
        - wa         : nomor WhatsApp format internasional tanpa "+"
        - formEndpoint: kosong = formulir membuka WhatsApp berisi pesan siap kirim.
                        Isi dengan URL Formspree/Getform/Apps Script kalau ingin
                        data formulir masuk tanpa lewat WhatsApp.
        ===================================================================== */
     const SITE = {
-      legal: 'PT [Nama Badan Hukum]',
+      legal: 'Tunas Lentera Optimasilogika',
       city: 'Bandung, Jawa Barat',
-      email: '',              // kosong = tampil placeholder, tautan email disembunyikan
+      email: 'aditiarafifkh@gmail.com',  // kosong = tampil placeholder, tautan email disembunyikan
       emailPlaceholder: '[alamat email tim]',
       phone: '0812-2396-0797',
       wa: '6281223960797',
@@ -408,8 +408,8 @@
     };
 
     const UI = {
-      en: { who: 'Who was involved', partner: 'Delivered with a partner company', visit: 'Visit the live site', internal: 'Client system, not open to the public', biz: 'In plain terms', tech: 'Under the hood', exp: 'Experience', all: 'All', live: 'Live', soon: 'In the works', tryBtn: 'Try the prototype', soonBtn: 'Coming soon', empty: 'Nothing in this category yet. More prototypes are on the way.', pick: 'Choose a service', submitWa: 'Send via WhatsApp', submitForm: 'Send', helpWa: 'Your WhatsApp opens with the message ready. Just press send.', sending: 'Sending…', sent: 'Thank you. Your message has reached us and we will get back to you.', failed: 'Sending failed. Please reach us on WhatsApp instead.', opened: 'WhatsApp is opening in a new tab. Prefer email?', openedNoMail: 'WhatsApp is opening in a new tab. Just press send.', emailLink: 'Send it by email instead', waGreeting: 'Hello RekaInsta, I would like to start a conversation.', lName: 'Name', lOrg: 'Organisation', lWa: 'WhatsApp', lEmail: 'Email', lService: 'Service', lMsg: 'Need', subject: 'New enquiry from the website', proof: 'Track record', people: 'Team', now: 'now' },
-      id: { who: 'Siapa yang terlibat', partner: 'Dikerjakan bersama perusahaan mitra', visit: 'Lihat situsnya', internal: 'Sistem milik klien, tidak dibuka untuk umum', biz: 'Bahasa sederhananya', tech: 'Dari sisi teknis', exp: 'Pengalaman', all: 'Semua', live: 'Bisa dicoba', soon: 'Sedang disiapkan', tryBtn: 'Coba prototipenya', soonBtn: 'Segera hadir', empty: 'Belum ada prototipe di kategori ini. Segera menyusul.', pick: 'Pilih layanan', submitWa: 'Kirim lewat WhatsApp', submitForm: 'Kirim pengajuan', helpWa: 'WhatsApp Anda akan terbuka dengan pesan yang sudah tersusun. Tinggal tekan kirim.', sending: 'Mengirim…', sent: 'Terima kasih. Pesan Anda sudah kami terima dan akan kami hubungi.', failed: 'Gagal terkirim. Silakan hubungi kami lewat WhatsApp.', opened: 'WhatsApp terbuka di tab baru. Lebih suka email?', openedNoMail: 'WhatsApp terbuka di tab baru. Tinggal tekan kirim.', emailLink: 'Kirim lewat email saja', waGreeting: 'Halo RekaInsta, saya ingin mulai percakapan.', lName: 'Nama', lOrg: 'Usaha/instansi', lWa: 'WhatsApp', lEmail: 'Email', lService: 'Layanan', lMsg: 'Kebutuhan', subject: 'Pengajuan baru dari website', proof: 'Bukti', people: 'Tim', now: 'sekarang' }
+      en: { who: 'Who was involved', partner: 'Delivered with a partner company', visit: 'Visit the live site', internal: 'Client system, not open to the public', biz: 'In plain terms', tech: 'Under the hood', exp: 'Experience', all: 'All', live: 'Live', soon: 'In the works', tryBtn: 'Try the prototype', soonBtn: 'Coming soon', empty: 'Nothing in this category yet. More prototypes are on the way.', pick: 'Choose a service', submitWa: 'Send via WhatsApp', submitForm: 'Send', helpWa: 'Your WhatsApp opens with the message ready. Just press send.', sending: 'Sending…', sent: 'Thank you. Your message has reached us and we will get back to you.', failed: 'Sending failed. Please reach us on WhatsApp instead.', opened: 'WhatsApp is opening in a new tab. Just press send. Prefer email?', openedNoMail: 'WhatsApp is opening in a new tab. Just press send.', emailLink: 'Send it by email instead', waGreeting: 'Hello RekaInsta, I would like to start a conversation.', lName: 'Name', lOrg: 'Organisation', lWa: 'WhatsApp', lEmail: 'Email', lService: 'Service', lMsg: 'Need', subject: 'New enquiry from the website', proof: 'Track record', people: 'Team', now: 'now' },
+      id: { who: 'Siapa yang terlibat', partner: 'Dikerjakan bersama perusahaan mitra', visit: 'Lihat situsnya', internal: 'Sistem milik klien, tidak dibuka untuk umum', biz: 'Bahasa sederhananya', tech: 'Dari sisi teknis', exp: 'Pengalaman', all: 'Semua', live: 'Bisa dicoba', soon: 'Sedang disiapkan', tryBtn: 'Coba prototipenya', soonBtn: 'Segera hadir', empty: 'Belum ada prototipe di kategori ini. Segera menyusul.', pick: 'Pilih layanan', submitWa: 'Kirim lewat WhatsApp', submitForm: 'Kirim pengajuan', helpWa: 'WhatsApp Anda akan terbuka dengan pesan yang sudah tersusun. Tinggal tekan kirim.', sending: 'Mengirim…', sent: 'Terima kasih. Pesan Anda sudah kami terima dan akan kami hubungi.', failed: 'Gagal terkirim. Silakan hubungi kami lewat WhatsApp.', opened: 'WhatsApp terbuka di tab baru. Tinggal tekan kirim. Lebih suka email?', openedNoMail: 'WhatsApp terbuka di tab baru. Tinggal tekan kirim.', emailLink: 'Kirim lewat email saja', waGreeting: 'Halo RekaInsta, saya ingin mulai percakapan.', lName: 'Nama', lOrg: 'Usaha/instansi', lWa: 'WhatsApp', lEmail: 'Email', lService: 'Layanan', lMsg: 'Kebutuhan', subject: 'Pengajuan baru dari website', proof: 'Bukti', people: 'Tim', now: 'sekarang' }
     };
 
     const TAGS = { web: 'Web', mobile: 'Android / iOS', ai: 'AI', hardware: 'Hardware', chatbot: 'AI Chatbot', whatsapp: 'WhatsApp' };
